@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { animated } from "@react-spring/web";
 import styles from "./Button.module.css";
 const Button = ({
   variant = "default",
@@ -8,14 +8,14 @@ const Button = ({
   ...rest
 }) => {
   return (
-    <motion.button
+    <animated.button
       className={styles[variant]}
       onMouseDownCapture={onClick}
       onMouseUpCapture={onRelease}
       {...rest}
     >
       {title}
-    </motion.button>
+    </animated.button>
   );
 };
 export default Button;
